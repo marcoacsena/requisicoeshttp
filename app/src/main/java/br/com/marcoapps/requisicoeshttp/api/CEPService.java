@@ -3,9 +3,10 @@ package br.com.marcoapps.requisicoeshttp.api;
 import br.com.marcoapps.requisicoeshttp.model.CEP;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public interface CEPService {
 
-    @GET("01310100/json/")
-    Call<CEP> pegarDadosDoCEP();
+    @GET("{cep}/json/")
+    Call<CEP> pegarDadosDoCEP(@Path("cep") String cep);
 }

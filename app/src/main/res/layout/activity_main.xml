@@ -7,14 +7,30 @@
     android:layout_margin="16dp"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="14"
+        android:hint="Pressione o botão para obter uma lista de fotos"
+        android:id="@+id/editCEP"
+        />
 
     <Button
         android:id="@+id/btnRecuperarDados"
-        android:layout_width="wrap_content"
+        android:layout_width="1dp"
         android:layout_height="wrap_content"
-        android:text="Recuperar Dados" />
+        android:layout_weight="5"
+        android:background="#0083ca"
+        android:text="Pesquisar" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvResultado"
